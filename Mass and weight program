@@ -3,7 +3,7 @@ using namespace std;
 
 int main()
 {
-    double mass, weight;
+    float mass, weight;
     
     cout << "Please inset mass in kilogramss..." << endl;
     cin >> mass;
