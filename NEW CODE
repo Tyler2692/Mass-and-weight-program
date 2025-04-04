@@ -1,0 +1,62 @@
+#include <iostream>
+#include <limits>
+using namespace std;
+
+
+void weight_input(float &weight, float &mass);
+
+void user_output (float &weight);
+
+
+void weight_input(float &weight, float &mass)
+{
+    while(true){
+
+    cout << "Please inset mass in kilograms..." << endl;
+    cin >> mass;
+
+    weight = mass * 9.8;
+
+    if (cin.fail()) {
+            cin.clear();
+            cin.ignore(numeric_limits<streamsize>::max(), '\n');
+            cout << "Invalid input." << endl;
+            cout << "" << endl; // loops if input is invalid
+    }
+
+    else if (weight > 1000){
+        cout << "Sorry, it's too heavy. Must be under 103kg." << endl;
+    }
+    else if (weight < 10){
+     cout << "Sorry, it's too light. Must be over 1.02kg." << endl;
+    }
+
+    else{
+        break;
+    }
+  }
+}
+
+void user_output (float &weight)
+{
+    cout << "your weight is " << weight << " in newtons." << endl;
+}
+
+int main()
+{
+    
+    cout << "-------------------------------" << endl;
+    cout << "|Welcome to the Mass and Weight" << endl;
+    cout << "|           Program            " << endl;
+    cout << "| This program makes you enter " << endl;
+    cout << "|mass and tells you how much it" << endl;
+    cout << "|weighs in newtons.            " << endl;
+    float mass, weight;
+
+    weight_input(weight, mass);
+
+    user_output (weight);
+
+    return 0;
+
+}
