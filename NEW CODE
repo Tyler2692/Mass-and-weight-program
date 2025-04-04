@@ -45,12 +45,13 @@ void user_output (float &weight)
 int main()
 {
     
-    cout << "-------------------------------" << endl;
-    cout << "|Welcome to the Mass and Weight" << endl;
-    cout << "|           Program            " << endl;
-    cout << "| This program makes you enter " << endl;
-    cout << "|mass and tells you how much it" << endl;
-    cout << "|weighs in newtons.            " << endl;
+    cout << "-------------------------------_" << endl;
+    cout << "|Welcome to the Mass and Weight|" << endl;
+    cout << "|           Program            |" << endl;
+    cout << "| This program makes you enter |" << endl;
+    cout << "|your mass in kg and tells you |" << endl;
+    cout << "|how much it weighs in newtons.|" << endl;
+    cout << "--------------------------------" << endl;
     float mass, weight;
 
     weight_input(weight, mass);
